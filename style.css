@@ -603,3 +603,134 @@
 
 }
 
+
+/* =========================================
+   HEADER MOBILE GỌN GÀNG - THCS BÌNH LỢI
+========================================= */
+
+@media screen and (max-width: 850px) {
+
+  .nav {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 10px !important;
+    padding: 12px 5% !important;
+    min-height: 75px;
+  }
+
+  /* Logo + tên trường */
+  .nav .brand {
+    display: flex !important;
+    align-items: center !important;
+    flex: 1 1 auto;
+    min-width: 0;
+    gap: 10px;
+  }
+
+  /* Logo */
+  .nav .brandmark {
+    width: 48px !important;
+    height: 48px !important;
+    flex: 0 0 48px;
+    background: transparent;
+  }
+
+  .nav .brandmark img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  /* Tên trường */
+  .nav .brand-text {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2px;
+    min-width: 0;
+    white-space: nowrap;
+  }
+
+  .nav .brand-text strong {
+    font-family: 'Lora', Georgia, serif;
+    font-size: clamp(10px, 3.1vw, 14px) !important;
+    line-height: 1.4;
+    white-space: nowrap;
+  }
+
+  .nav .brand-text small {
+    font-family: 'Quicksand', sans-serif;
+    font-size: clamp(7px, 2vw, 10px) !important;
+    line-height: 1.4;
+    letter-spacing: 0.2px !important;
+    white-space: nowrap;
+  }
+
+  /* Ẩn nút viết lời chúc */
+  .nav .navbutton {
+    display: none !important;
+  }
+
+  /* Nút menu */
+  .nav .mobile-toggle {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 38px;
+    width: 38px;
+    height: 38px;
+    margin-left: auto;
+    padding: 0;
+    font-size: 25px;
+    background: transparent;
+    border: none;
+    color: #69422d;
+  }
+
+  /* Menu xổ xuống */
+  .nav .navlinks {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 18px 6%;
+    background: #fff8e9;
+    box-shadow: 0 10px 20px #604b3320;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .nav .navlinks.open {
+    display: flex !important;
+  }
+}
+
+/* Màn hình điện thoại rất nhỏ */
+@media screen and (max-width: 360px) {
+  .nav {
+    padding: 10px 3% !important;
+    gap: 6px !important;
+  }
+
+  .nav .brand {
+    gap: 6px;
+  }
+
+  .nav .brandmark {
+    width: 40px !important;
+    height: 40px !important;
+    flex-basis: 40px;
+  }
+
+  .nav .brand-text strong {
+    font-size: 10px !important;
+  }
+
+  .nav .brand-text small {
+    font-size: 7px !important;
+    letter-spacing: 0 !important;
+  }
+}
