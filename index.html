@@ -1,0 +1,781 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5e9d2">
+
+  <title>Nét Mực Tri Ân | Báo tường điện tử THCS Bình Lợi</title>
+
+  <!-- FILE CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="page">
+
+  <!-- ======================================
+       01. THANH THÔNG BÁO TRÊN CÙNG
+  ======================================= -->
+  <div class="topline">
+    LỚP 6/1 • SỐ ĐẶC BIỆT CHÀO MỪNG 20/11
+  </div>
+
+
+  <!-- ======================================
+       02. LOGO VÀ THANH MENU
+  ======================================= -->
+  <nav class="nav">
+
+    <a href="#trangchu" class="brand">
+
+      <!-- LOGO TRƯỜNG -->
+      <span class="brandmark">
+        <img
+          src="pic/Untitled-1.png"
+          alt="Logo Trường THCS Bình Lợi"
+        >
+      </span>
+
+      <!-- TÊN TRƯỜNG -->
+      <span>
+        THCS BÌNH LỢI
+        <br>
+        <small style="font:500 10px 'Quicksand',sans-serif;letter-spacing:1.4px">
+          BÁO TƯỜNG ĐIỆN TỬ
+        </small>
+      </span>
+
+    </a>
+
+    <!-- NÚT MENU ĐIỆN THOẠI -->
+    <button class="mobile-toggle" id="menuBtn" aria-label="Mở menu">
+      ☰
+    </button>
+
+    <!-- CÁC MỤC MENU -->
+    <div class="navlinks" id="menu">
+      <a href="#loingo">Lời ngỏ</a>
+      <a href="#baiviet">Tản văn</a>
+      <a href="#goc-tho">Góc thơ</a>
+      <a href="#hinhanh">Kỷ niệm</a>
+      <a href="#video">Góc Video</a>
+      <a href="#loichuc">Gửi lời tri ân</a>
+    </div>
+
+    <a class="navbutton" href="#loichuc">
+      💌 Viết lời chúc
+    </a>
+
+  </nav>
+
+
+  <!-- ======================================
+       03. TRANG CHỦ - BANNER CHÍNH
+  ======================================= -->
+  <header class="hero" id="trangchu">
+
+    <!-- NỘI DUNG BÊN TRÁI -->
+    <div>
+
+      <div class="eyebrow">
+        Ấn phẩm đặc biệt • Ngày Nhà giáo Việt Nam
+      </div>
+
+      <h1>
+        Nét Mực<br>
+        Tri Ân
+      </h1>
+
+      <h2>Trang giấy nhỏ, tình cảm lớn</h2>
+
+      <p>
+        Mỗi nét chữ là một lời cảm ơn.
+        Mỗi kỷ niệm là một đóa hoa gửi đến những
+        người thầy, người cô đã tận tụy gieo mầm
+        tri thức dưới mái trường THCS Bình Lợi.
+      </p>
+
+      <div class="hero-actions">
+
+        <a class="btn" href="#loingo">
+          Khám phá báo tường ↘
+        </a>
+
+        <a class="btn secondary" href="#loichuc">
+          Gửi lời chúc ♥
+        </a>
+
+      </div>
+    </div>
+
+    <!-- HÌNH MINH HỌA BÊN PHẢI -->
+    <div class="hero-art"
+         aria-label="Minh họa trang báo tường 20 tháng 11">
+
+      <div class="paper-card">
+
+        <span class="small">CHÀO MỪNG</span>
+
+        <span class="big">Thầy Cô</span>
+
+        <span class="date">20 • 11</span>
+
+        <span style="font-size:11px;color:#a76c48;margin-top:12px">
+          TRI ÂN • TÔN KÍNH • BIẾT ƠN
+        </span>
+
+        <span class="stamp">BÌNH<br>LỢI</span>
+
+      </div>
+
+      <span class="flower one">🌼</span>
+      <span class="flower two">🌿</span>
+
+    </div>
+
+  </header>
+
+
+  <!-- ======================================
+       04. THANH TRÍCH DẪN
+  ======================================= -->
+  <div class="ticker">
+    “Có một nghề bụi phấn bám đầy tay,
+    người ta bảo đó là nghề cao quý…”
+  </div>
+
+
+  <!-- ======================================
+       05. SLIDESHOW HÌNH ẢNH
+       ẢNH ĐƯỢC KHAI BÁO TRONG SCRIPT.JS
+  ======================================= -->
+  <section class="memory-slideshow">
+
+    <div class="slideshow-heading">
+
+      <span>NHỮNG KHOẢNH KHẮC THÂN THƯƠNG</span>
+
+      <h2>Dấu Ấn Mái Trường</h2>
+
+      <p>
+        Lưu giữ những kỷ niệm đẹp dưới mái trường
+        THCS Bình Lợi
+      </p>
+
+    </div>
+
+    <!-- KHUNG SLIDESHOW -->
+    <div class="slideshow-container" id="schoolSlideshow">
+
+      <!-- JAVASCRIPT TỰ ĐỘNG THÊM ẢNH -->
+      <div id="slidesWrapper"></div>
+
+      <!-- NÚT CHUYỂN ẢNH -->
+      <button class="slide-prev" aria-label="Ảnh trước">
+        ❮
+      </button>
+
+      <button class="slide-next" aria-label="Ảnh tiếp theo">
+        ❯
+      </button>
+
+      <!-- CHẤM ĐIỀU HƯỚNG -->
+      <div class="slide-dots" id="slideDots"></div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ======================================
+       06. LỜI NGỎ
+  ======================================= -->
+  <section class="section" id="loingo">
+
+    <div class="sectionhead">
+
+      <div class="kicker">
+        Trang 01 • Thay lời muốn nói
+      </div>
+
+      <h2>Lời ngỏ</h2>
+
+      <div class="ornament">❧ ✦ ❧</div>
+
+    </div>
+
+    <div class="letter">
+
+      <p>
+        <strong>Kính gửi quý thầy cô giáo thân mến!</strong>
+      </p>
+
+      <p>
+        Tháng Mười Một lại về, mang theo nắng dịu dàng
+        và những lời tri ân chưa bao giờ nói hết.
+        Dưới mái trường THCS Bình Lợi, chúng em lớn lên
+        từng ngày qua những bài giảng, những lời động viên
+        và cả sự kiên nhẫn âm thầm của thầy cô.
+      </p>
+
+      <p>
+        Nhân kỷ niệm Ngày Nhà giáo Việt Nam 20/11,
+        tập thể học sinh xin gửi đến thầy cô ấn phẩm
+        báo tường điện tử
+        <strong>“Nét Mực Tri Ân”</strong>
+        — nơi lưu giữ những câu chuyện đẹp, vần thơ
+        giản dị, bức ảnh thân thương và lời cảm ơn
+        từ trái tim.
+      </p>
+
+      <p>
+        Chúng em kính chúc thầy cô luôn mạnh khỏe,
+        hạnh phúc và mãi giữ ngọn lửa yêu nghề.
+        Dù mai này đi đến những chân trời mới,
+        chúng em sẽ luôn nhớ nơi đã chắp cánh
+        những ước mơ đầu tiên.
+      </p>
+
+      <div class="sign">
+        Tập thể học sinh lớp 6/1 ♡
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ======================================
+       07. TẢN VĂN VÀ CẢM NHẬN
+       NỘI DUNG ĐẦY ĐỦ NẰM TRONG SCRIPT.JS
+  ======================================= -->
+  <section class="section alt" id="baiviet">
+
+    <div class="sectionhead">
+
+      <div class="kicker">
+        Trang 02 • Những câu chuyện dưới mái trường
+      </div>
+
+      <h2>Tản văn & cảm nhận</h2>
+
+      <p>
+        Những dòng tâm sự mộc mạc viết về người thầy,
+        người cô và năm tháng học trò.
+      </p>
+
+    </div>
+
+    <div class="cards">
+
+      <!-- BÀI VIẾT 1 -->
+      <article class="story">
+
+        <div class="story-visual">📖</div>
+
+        <div class="story-body">
+
+          <span class="tag">Tản văn • Góc học trò</span>
+
+          <h3>Người gieo những mùa xanh</h3>
+
+          <p>
+            Thầy cô không chỉ trao cho chúng em
+            kiến thức, mà còn dạy cách tin vào
+            chính mình trên mỗi chặng đường…
+          </p>
+
+          <button class="linkbtn" data-story="0">
+            Đọc bài viết →
+          </button>
+
+        </div>
+      </article>
+
+      <!-- BÀI VIẾT 2 -->
+      <article class="story">
+
+        <div class="story-visual">🏫</div>
+
+        <div class="story-body">
+
+          <span class="tag">Kỷ niệm • Mái trường</span>
+
+          <h3>Một thời áo trắng</h3>
+
+          <p>
+            Có những tiếng trống, góc hành lang,
+            trang vở và ánh mắt thầy cô mà chúng em
+            sẽ mang theo mãi…
+          </p>
+
+          <button class="linkbtn" data-story="1">
+            Đọc bài viết →
+          </button>
+
+        </div>
+      </article>
+
+      <!-- BÀI VIẾT 3 -->
+      <article class="story">
+
+        <div class="story-visual">💌</div>
+
+        <div class="story-body">
+
+          <span class="tag">Thư gửi • Tri ân</span>
+
+          <h3>Điều em chưa kịp nói</h3>
+
+          <p>
+            Không phải lúc nào chúng em cũng biết
+            nói lời cảm ơn. Lá thư này xin thay
+            cho những điều còn ngập ngừng…
+          </p>
+
+          <button class="linkbtn" data-story="2">
+            Đọc bài viết →
+          </button>
+
+        </div>
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- ======================================
+       08. GÓC THƠ HỌC TRÒ
+  ======================================= -->
+  <section class="section" id="goc-tho">
+
+    <div class="sectionhead">
+
+      <div class="kicker">
+        Trang 03 • Vần thơ thương mến
+      </div>
+
+      <h2>Góc thơ học trò</h2>
+
+      <p>
+        Những vần thơ sáng tác riêng
+        cho báo tường điện tử của trường.
+      </p>
+
+    </div>
+
+    <div class="poems">
+
+      <!-- BÀI THƠ 1 -->
+      <div class="poem">
+
+        <h3>Phấn trắng sân trường</h3>
+
+        <p>Trang vở mở giữa ban mai,
+Lời cô ấm áp theo hoài tháng năm.
+Bảng xanh giữ những âm thầm,
+Phấn rơi hóa những mầm non đón ngày.
+
+Mai sau dù bước đường dài,
+Ơn thầy nghĩa bạn chẳng phai trong lòng.</p>
+
+        <cite>
+          — Góc sáng tác học sinh (bài mẫu)
+        </cite>
+
+      </div>
+
+      <!-- BÀI THƠ 2 -->
+      <div class="poem">
+
+        <h3>Tháng Mười Một nhớ</h3>
+
+        <p>Sân trường nắng đậu trên vai,
+Gió mang lời chúc gửi ai dịu dàng.
+Cô nâng từng chữ sang trang,
+Thầy gieo hy vọng ngập tràn ước mơ.
+
+Hôm nay viết mấy dòng thơ,
+Cảm ơn người đã đợi chờ chúng em.</p>
+
+        <cite>
+          — Góc sáng tác học sinh (bài mẫu)
+        </cite>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  
+<!-- ======================================
+     09. ALBUM KÝ ỨC
+======================================= -->
+<section class="section alt" id="hinhanh">
+
+  <div class="sectionhead">
+    <div class="kicker">
+      Trang 04 • Khoảnh khắc đáng nhớ
+    </div>
+
+    <h2>Album ký ức</h2>
+
+    <p>
+      Cùng nhìn lại những khoảnh khắc thân thương
+      dưới mái trường THCS Bình Lợi.
+    </p>
+  </div>
+
+  <div class="gallery album-grid">
+
+    <!-- ALBUM 1 -->
+    <button class="photo album-card" data-album="thayco">
+      <span class="symbol">📷</span>
+      <b>Thầy cô và học sinh</b>
+      <span class="overlay">Xem album ảnh ↗</span>
+    </button>
+
+    <!-- ALBUM 2 -->
+    <button class="photo album-card" data-album="hoatdong">
+      <span class="symbol">🌺</span>
+      <b>Hoạt động 20/11</b>
+      <span class="overlay">Xem album ảnh ↗</span>
+    </button>
+
+    
+
+    <!-- ALBUM 4 -->
+    <button class="photo album-card" data-album="lopem">
+      <span class="symbol">🎓</span>
+      <b>Khoảnh khắc lớp em</b>
+      <span class="overlay">Xem album ảnh ↗</span>
+    </button>
+
+  </div>
+</section>
+
+
+<!-- ======================================
+     DANH SÁCH ẢNH CỦA TỪNG ALBUM
+     CHỈ CẦN THÊM THẺ IMG KHI MUỐN THÊM ẢNH
+======================================= -->
+
+<div id="albumData" hidden>
+
+  <!-- ALBUM 1: THẦY CÔ VÀ HỌC SINH -->
+  <div data-gallery="thayco" data-title="Thầy cô và học sinh">
+    <img src="pic/1.jpg" alt="Thầy cô và học sinh 1">
+    <img src="pic/4.jpg" alt="Thầy cô và học sinh 2">
+    <img src="pic/8.jpg" alt="Thầy cô và học sinh 3">
+  </div>
+
+  <!-- ALBUM 2: HOẠT ĐỘNG 20/11 -->
+  <div data-gallery="hoatdong" data-title="Hoạt động 20/11">
+    <img src="pic/25.jpg" alt="Hoạt động 20/11 - Ảnh 1">
+    <img src="pic/20.jpg" alt="Hoạt động 20/11 - Ảnh 2">
+    <img src="pic/26.jpg" alt="Hoạt động 20/11 - Ảnh 3">
+  </div>
+
+  <!-- ALBUM 3: KHOẢNH KHẮC LỚP EM -->
+  <div data-gallery="lopem" data-title="Khoảnh khắc lớp em">
+    <img src="pic/18.jpg" alt="Khoảnh khắc lớp em 1">
+    <img src="pic/14.jpg" alt="Khoảnh khắc lớp em 2">
+    <img src="pic/11.jpg" alt="Khoảnh khắc lớp em 3">
+  </div>
+
+</div>
+
+<!-- ======================================
+     POPUP HIỂN THỊ ALBUM
+======================================= -->
+<div class="album-modal" id="albumModal"
+     role="dialog" aria-modal="true"
+     aria-labelledby="albumTitle">
+
+  <div class="album-dialog">
+
+    <button class="album-close" id="albumClose"
+            aria-label="Đóng album">✕</button>
+
+    <div class="album-header">
+      <span>NHỮNG KỶ NIỆM THÂN THƯƠNG</span>
+      <h2 id="albumTitle">Album hình ảnh</h2>
+      <p id="albumCount"></p>
+    </div>
+
+    <!-- ẢNH TỰ ĐỘNG HIỂN THỊ TẠI ĐÂY -->
+    <div class="album-photos" id="albumPhotos"></div>
+
+  </div>
+</div>
+
+
+<!-- ======================================
+     POPUP PHÓNG TO ẢNH
+======================================= -->
+<div class="photo-lightbox" id="photoLightbox"
+     role="dialog" aria-modal="true"
+     aria-label="Xem ảnh phóng to">
+
+  <button class="lightbox-close" id="lightboxClose"
+          aria-label="Đóng ảnh">✕</button>
+
+  <button class="lightbox-prev" id="lightboxPrev"
+          aria-label="Ảnh trước">❮</button>
+
+  <img id="lightboxImage" alt="Ảnh kỷ niệm">
+
+  <button class="lightbox-next" id="lightboxNext"
+          aria-label="Ảnh tiếp theo">❯</button>
+
+  <div class="lightbox-counter" id="lightboxCounter"></div>
+
+</div>
+
+
+<!-- ======================================
+     GÓC VIDEO - THƯỚC PHIM TRI ÂN
+======================================= -->
+<section class="section video-section" id="video">
+
+  <div class="sectionhead">
+    <div class="kicker">
+      Trang 05 • Thước phim tri ân
+    </div>
+
+    <h2>Góc Video Kỷ Niệm</h2>
+
+    <p>
+      Những thước phim lưu giữ kỷ niệm đẹp
+      và lời chúc yêu thương gửi đến thầy cô.
+    </p>
+  </div>
+
+  <div class="video-grid">
+
+    <!-- VIDEO 1 -->
+    <div class="video-card">
+      <div class="video-frame">
+        <iframe
+          src="https://www.youtube.com/embed/NVee6FoaQh8"
+          title="Video tri ân thầy cô"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <div class="video-info">
+        <h3>Lời Tri Ân Gửi Thầy Cô</h3>
+        <p>Những lời chúc chân thành nhân ngày 20/11.</p>
+      </div>
+    </div>
+
+    <!-- VIDEO 2 - THAY ID VIDEO CỦA BẠN -->
+    <div class="video-card">
+      <div class="video-frame">
+        <iframe
+          src="https://www.youtube.com/embed/UPYz3N3940M"
+          title="Video kỷ niệm mái trường"
+          loading="lazy"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <div class="video-info">
+        <h3>Khoảnh Khắc Mái Trường</h3>
+        <p>Lưu giữ những kỷ niệm đẹp của tuổi học trò.</p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+  <!-- ======================================
+       10. GỬI LỜI TRI ÂN
+  ======================================= -->
+  <section class="section" id="loichuc">
+
+    <div class="sectionhead">
+
+      <div class="kicker">
+        Trang 06 • Hộp thư yêu thương
+      </div>
+
+      <h2>Gửi một lời tri ân</h2>
+
+      <p>
+        Mỗi lời chúc chân thành là một
+        bông hoa đẹp dành tặng thầy cô.
+      </p>
+
+    </div>
+
+    <div class="wish-area">
+
+      <!-- GIỚI THIỆU -->
+      <div class="wish-intro">
+
+        <h3>Thầy cô ơi, chúng em muốn nói…</h3>
+
+        <p>
+          Hãy viết một lời cảm ơn, một kỷ niệm
+          hoặc một lời chúc đến thầy cô thân yêu.
+          Bức thư của bạn sẽ xuất hiện trên bảng
+          lời chúc ngay bên dưới.
+        </p>
+
+       
+
+        <div style="font-size:80px;margin:25px 0">
+          💐 ✉️
+        </div>
+
+      </div>
+
+      <!-- FORM GỬI LỜI CHÚC -->
+      <form id="wishForm">
+
+        <label class="formfield">
+          Họ tên hoặc tập thể lớp
+
+          <input
+            id="name"
+            maxlength="50"
+            required
+            placeholder="Ví dụ: Tập thể lớp 6/1"
+          >
+
+        </label>
+
+        <label class="formfield">
+          Lời nhắn dành tặng thầy cô
+
+          <textarea
+            id="message"
+            maxlength="500"
+            required
+            placeholder="Nhân ngày 20/11, chúng em muốn gửi đến thầy cô…"
+          ></textarea>
+
+        </label>
+
+        <button class="btn" type="submit">
+          💌 Gắn lời chúc lên báo tường
+        </button>
+
+        <button
+          class="btn secondary"
+          type="button"
+          id="exportWishes"
+          style="margin-left:8px"
+        >
+          Lưu lời chúc (.txt)
+        </button>
+
+      </form>
+
+    </div>
+
+    <!-- BẢNG HIỂN THỊ LỜI CHÚC -->
+    <div class="wish-wall" id="wishWall"></div>
+
+  </section>
+
+
+  <!-- ======================================
+       11. CHÂN TRANG
+  ======================================= -->
+  <footer class="footer">
+
+    <h2>Nét Mực Tri Ân</h2>
+
+    <p>
+      Ấn phẩm chào mừng Ngày Nhà giáo Việt Nam 20/11/2026
+    </p>
+
+    <p>
+      TRƯỜNG TRUNG HỌC CƠ SỞ BÌNH LỢI
+      • LỚP 6/1
+    </p>
+
+    <p>
+      Được thực hiện bằng những tình cảm
+      trong sáng nhất của tuổi học trò ♡
+    </p>
+
+    <a href="#trangchu" style="font-size:12px;text-decoration:underline">
+      Về đầu trang ↑
+    </a>
+
+  </footer>
+
+</div><!-- KẾT THÚC PAGE -->
+
+
+<!-- ======================================
+     12. POPUP ĐỌC BÀI VIẾT
+======================================= -->
+<div
+  class="modal"
+  id="modal"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="storyTitle"
+>
+
+  <div class="dialog">
+
+    <button
+      id="closeModal"
+      class="close"
+      aria-label="Đóng"
+    >
+      ✕
+    </button>
+
+    <div class="kicker">
+      Tủ sách báo tường
+    </div>
+
+    <h2 id="storyTitle"></h2>
+
+    <div id="storyContent"></div>
+
+  </div>
+
+</div>
+
+
+<!-- ======================================
+     13. THÔNG BÁO NHỎ
+======================================= -->
+<div
+  class="toast"
+  id="toast"
+  role="status"
+></div>
+
+
+<!-- ======================================
+     HIỆU ỨNG PHÁO GIẤY CHÀO MỪNG
+======================================= -->
+
+<!-- HIỆU ỨNG PHÁO GIẤY -->
+<canvas id="confettiCanvas" aria-hidden="true"></canvas>
+
+<!-- KẾT NỐI JAVASCRIPT -->
+<script src="script.js" defer></script>
+
+</body>
+</html>
+
+

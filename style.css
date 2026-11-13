@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Dancing+Script:wght@500;600;700&family=Lora:wght@500;600;700&display=swap');
+:root{--paper:#fbf4e6;--cream:#fffaf0;--ink:#443c32;--brown:#7a4935;--red:#ac513e;--gold:#bb8a42;--green:#536b56;--line:#dccbae;--shadow:0 16px 45px #604b3322}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#e9dfcd;color:var(--ink);font-family:'Quicksand',Arial,sans-serif;font-size:14px;line-height:1.75}button,input,textarea{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}.page{max-width:1440px;margin:auto;background:var(--paper);overflow:hidden;min-height:100vh}.topline{background:#284738;color:#f8edce;text-align:center;letter-spacing:2px;font-size:11px;padding:8px}.nav{position:sticky;top:0;z-index:30;background:#fff9edee;backdrop-filter:blur(12px);box-shadow:0 2px 12px #55402b17;padding:14px 6%;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:11px;font-family:'Lora',Georgia,serif;font-weight:bold;color:#69422d}.brandmark{width:42px;height:42px;background:#355844;color:#fff4d9;border-radius:50%;display:grid;place-items:center;font-size:22px}.navlinks{display:flex;align-items:center;gap:23px;font-size:12px;font-weight:700}.navlinks a:hover{color:var(--red)}.navbutton,.btn{border:none;background:#a9483e;color:white;padding:12px 23px;border-radius:40px;font-size:12px;font-weight:700;box-shadow:0 5px 15px #a9483e33}.mobile-toggle{display:none;border:0;background:none;font-size:23px}.hero{min-height:590px;background:radial-gradient(circle at 15% 40%,#f5d8aa 0,transparent 27%),radial-gradient(circle at 88% 25%,#e9cfa5 0,transparent 26%),linear-gradient(115deg,#f8ebd2,#fff8e7 45%,#e9dabd);position:relative;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;padding:68px 8%;isolation:isolate;overflow:hidden}.hero:before,.hero:after{content:'✿';position:absolute;color:#a76a47;opacity:.11;font-size:280px;z-index:-1}.hero:before{left:-60px;bottom:-150px}.hero:after{right:-65px;top:-170px}.eyebrow{color:#976338;text-transform:uppercase;letter-spacing:4px;font-weight:800;font-size:12px}.hero h1{font-family:'Dancing Script',cursive;font-size:clamp(68px,8vw,130px);font-weight:700;line-height:.98;margin:20px 0;color:#9b4935;text-shadow:3px 3px #e7c9a0}.hero h2{font-family:'Lora',Georgia,serif;font-size:27px;color:#365a42;margin:15px 0}.hero p{max-width:510px;font-size:15px;color:#6b6054}.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}.btn.secondary{background:transparent;border:1px solid #a74e3d;color:#924736;box-shadow:none}.hero-art{position:relative;min-height:410px;display:flex;align-items:center;justify-content:center}.paper-card{width:310px;height:375px;background:#fff8e8;border:10px solid #fdf7eb;box-shadow:18px 20px 0 #9c6d4540,0 20px 55px #67513944;transform:rotate(6deg);display:flex;align-items:center;justify-content:center;flex-direction:column;position:relative}.paper-card:before{content:'';position:absolute;inset:20px;border:2px solid #d8b986}.paper-card .big{font-family:'Dancing Script',cursive;color:#a74e3d;font-size:74px;line-height:1}.paper-card .small{font-size:13px;letter-spacing:4px;color:#5b704e}.paper-card .date{font-size:29px;font-weight:800;color:#986a3e}.flower{position:absolute;font-size:95px;filter:drop-shadow(7px 8px 2px #52462f24)}.flower.one{left:0;bottom:0;transform:rotate(-30deg)}.flower.two{right:-7px;top:-20px;font-size:75px}.stamp{position:absolute;bottom:15px;right:10px;color:#a64d3e;border:2px solid #a64d3e;border-radius:50%;width:68px;height:68px;display:grid;place-items:center;transform:rotate(-17deg);font-weight:bold;line-height:1.2;text-align:center;font-size:12px}.ticker{background:#375846;color:#fff9e9;padding:12px 8%;text-align:center;font-family:'Dancing Script',cursive;font-size:24px}.section{padding:75px 8%}.section.alt{background:#f4ead7}.sectionhead{text-align:center;margin-bottom:36px}.kicker{letter-spacing:3px;color:#a66b3b;font-size:11px;font-weight:800;text-transform:uppercase}.sectionhead h2{font-family:'Lora',Georgia,serif;font-size:clamp(29px,3.5vw,42px);margin:7px 0;color:#6d4934}.sectionhead p{color:#7e7160;max-width:700px;margin:0 auto}.ornament{color:#b98c55;font-size:25px;letter-spacing:12px}.letter{max-width:920px;margin:auto;background:#fffaf0;padding:50px 65px;box-shadow:var(--shadow);border:1px solid #e8d7bb;position:relative}.letter:before{content:'“';position:absolute;top:-30px;left:25px;font:130px Georgia;color:#b78b5b33}.letter p{text-align:justify;font-size:15px}.letter .sign{text-align:right;color:#98543f;font-family:'Dancing Script';font-size:28px;font-weight:bold}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.story{background:#fffaf0;border:1px solid #e5d6ba;box-shadow:0 8px 22px #66523a16;overflow:hidden;transition:transform .2s}.story:hover{transform:translateY(-5px)}.story-visual{height:174px;display:grid;place-items:center;font-size:77px;background:linear-gradient(130deg,#ecd9b7,#f9edd8);position:relative}.story:nth-child(2) .story-visual{background:linear-gradient(130deg,#d8e0cb,#fff2d7)}.story:nth-child(3) .story-visual{background:linear-gradient(130deg,#f0d0ba,#f7edce)}.story-body{padding:24px}.tag{font-size:10px;text-transform:uppercase;letter-spacing:2px;color:#a96944;font-weight:800}.story h3{font:700 22px 'Lora',serif;margin:9px 0;color:#714934}.story p{font-size:13px;color:#776c5d;min-height:72px}.linkbtn{background:none;border:0;padding:0;color:#a44e38;font-weight:bold}.poems{display:grid;grid-template-columns:1fr 1fr;gap:30px}.poem{padding:32px 38px;background:#fff9ed;border-left:4px solid #b98a52;box-shadow:0 8px 25px #5b4d3414}.poem h3{font:700 25px 'Dancing Script',cursive;color:#a44f3c}.poem p{white-space:pre-line;line-height:2.1}.poem cite{display:block;text-align:right;color:#917659;font-style:normal}.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.photo{min-height:190px;background:#ddcdb3;border:7px solid white;box-shadow:0 5px 15px #4e3c2820;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:20px}.photo:nth-child(2){background:#d4dfd0}.photo:nth-child(3){background:#e9cfbd}.photo:nth-child(4){background:#e2dcb8}.photo .symbol{font-size:63px}.photo b{font-size:12px;color:#6b563e}.photo input{position:absolute;inset:0;opacity:0;cursor:pointer}.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.photo .overlay{position:absolute;bottom:0;background:#2f2d28aa;color:white;width:100%;font-size:11px;padding:8px}.wish-area{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px}.wish-intro h3{font:700 34px 'Dancing Script',cursive;color:#984c3b}.wish-intro p{color:#716456}.formfield{display:block;margin-bottom:12px;font-size:12px;font-weight:800}.formfield input,.formfield textarea{width:100%;border:1px solid #ddc9ac;background:#fffaf2;padding:14px;outline-color:#a34c38;border-radius:5px;margin-top:5px;color:#4b3a2f}.formfield textarea{resize:vertical;min-height:120px}.wish-wall{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;margin-top:30px}.wish{padding:22px 18px;background:#fff6d9;box-shadow:3px 7px 13px #584b3119;transform:rotate(-1.5deg);border-top:5px solid #cb9c70}.wish:nth-child(even){transform:rotate(1.5deg);background:#e7efdf;border-color:#8ea88f}.wish p{font-size:13px}.wish b{color:#99533e;font-size:11px}.footer{background:#2e4a3b;color:#f7ecd6;text-align:center;padding:52px 20px}.footer h2{font:700 35px 'Dancing Script',cursive;margin:0}.footer p{font-size:12px;opacity:.8}.modal{position:fixed;inset:0;background:#19160fe0;display:none;align-items:center;justify-content:center;padding:18px;z-index:100}.modal.show{display:flex}.dialog{background:#fff9ee;border:8px solid #e8d6ba;max-width:700px;width:100%;max-height:86vh;overflow:auto;padding:35px 40px;position:relative}.dialog h2{font:700 30px 'Lora',serif;color:#8d4b34}.close{position:absolute;right:8px;top:7px;background:none;border:0;font-size:25px;color:#694333}.note{font-size:11px;color:#816b50}.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#355441;color:white;padding:12px 22px;border-radius:20px;display:none;z-index:110;box-shadow:var(--shadow)}@media(max-width:850px){.navlinks{display:none;position:absolute;top:70px;left:0;right:0;background:#fff8e9;padding:20px;flex-direction:column;align-items:flex-start}.navlinks.open{display:flex}.mobile-toggle{display:block}.hero{grid-template-columns:1fr;padding:55px 7%}.hero-art{min-height:400px}.cards{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr 1fr}.wish-area{grid-template-columns:1fr}}@media(max-width:570px){.hero h1{font-size:76px}.hero h2{font-size:22px}.hero-art{min-height:350px}.paper-card{width:245px;height:300px}.paper-card .big{font-size:56px}.section{padding:55px 6%}.letter{padding:28px 26px}.cards,.poems,.wish-wall{grid-template-columns:1fr}.story p{min-height:auto}.gallery{gap:7px}.photo{min-height:150px}.dialog{padding:25px 20px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* ===== SLIDESHOW BAO TUONG ===== */
+
+.memory-slideshow {
+  padding: 55px 8% 65px;
+  background: #fbf4e6;
+  text-align: center;
+}
+
+.slideshow-heading {
+  margin-bottom: 28px;
+}
+
+.slideshow-heading span {
+  color: #a66b3b;
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+
+.slideshow-heading h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: clamp(36px, 5vw, 55px);
+  color: #924d3a;
+  margin: 8px 0;
+}
+
+.slideshow-heading p {
+  color: #796955;
+  font-size: 14px;
+}
+
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  aspect-ratio: 16 / 9;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 9px solid #fffaf0;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px #604b3333;
+  background: #e9dbc4;
+}
+
+.slideshow-container .slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.9s ease, visibility 0.9s;
+}
+
+.slideshow-container .slide.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
+}
+
+.slideshow-container .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.slide-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 35px 20px 35px;
+  background: linear-gradient(transparent, #241b16b8);
+  color: white;
+  font-family: 'Dancing Script', cursive;
+  font-size: clamp(22px, 3vw, 34px);
+  font-weight: 700;
+  text-align: center;
+}
+
+.slide-prev,
+.slide-next {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff8e7bb;
+  color: #714934;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.slide-prev { left: 15px; }
+.slide-next { right: 15px; }
+
+.slide-prev:hover,
+.slide-next:hover {
+  background: #fff8e7;
+}
+
+.slide-dots {
+  position: absolute;
+  bottom: 13px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+  display: flex;
+  gap: 9px;
+}
+
+.slide-dots .dot {
+  width: 10px;
+  height: 10px;
+  border: none;
+  border-radius: 50%;
+  background: #ffffff88;
+  padding: 0;
+  cursor: pointer;
+}
+
+.slide-dots .dot.active {
+  background: #fff;
+  width: 25px;
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .memory-slideshow {
+    padding: 35px 5%;
+  }
+
+  .slideshow-container {
+    border-width: 5px;
+    border-radius: 10px;
+  }
+
+  .slide-prev,
+  .slide-next {
+    width: 32px;
+    height: 32px;
+    font-size: 15px;
+  }
+
+  .slide-caption {
+    padding-bottom: 30px;
+  }
+}
+
+/* LOGO TRUONG THCS BINH LOI */
+
+.brandmark {
+  width: 52px;
+  height: 52px;
+  background: transparent;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.brandmark img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* =====================================
+   ALBUM KÝ ỨC - KHUNG ALBUM
+===================================== */
+
+.album-card {
+  width: 100%;
+  font-family: inherit;
+  cursor: pointer;
+  border: 7px solid white;
+  transition: transform .3s, box-shadow .3s;
+}
+
+.album-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px #604b3340;
+}
+
+.album-card .overlay {
+  pointer-events: none;
+}
+
+/* =====================================
+   POPUP ALBUM
+===================================== */
+
+.album-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: #201b16d9;
+}
+
+.album-modal.show {
+  display: flex;
+}
+
+.album-dialog {
+  position: relative;
+  width: 100%;
+  max-width: 1050px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #fbf4e6;
+  border: 8px solid #fff9ed;
+  border-radius: 14px;
+  padding: 38px;
+  box-shadow: 0 20px 70px #0005;
+}
+
+.album-close {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  width: 37px;
+  height: 37px;
+  border: none;
+  border-radius: 50%;
+  background: #a9483e;
+  color: white;
+  font-size: 19px;
+  cursor: pointer;
+}
+
+.album-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.album-header span {
+  color: #a66b3b;
+  letter-spacing: 3px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.album-header h2 {
+  font-family: 'Dancing Script', cursive;
+  color: #924d3a;
+  font-size: 48px;
+  margin: 8px 0;
+}
+
+.album-header p {
+  color: #776b5c;
+  font-size: 13px;
+}
+
+/* =====================================
+   LƯỚI ẢNH TRONG ALBUM
+===================================== */
+
+.album-photos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.album-photos button {
+  padding: 0;
+  border: 6px solid white;
+  background: white;
+  cursor: pointer;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  box-shadow: 0 5px 15px #604b3320;
+}
+
+.album-photos img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .35s;
+}
+
+.album-photos button:hover img {
+  transform: scale(1.07);
+}
+
+/* =====================================
+   PHÓNG TO ẢNH
+===================================== */
+
+.photo-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 65px;
+  background: #10100ff2;
+}
+
+.photo-lightbox.show {
+  display: flex;
+}
+
+.photo-lightbox img {
+  max-width: 100%;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  border: none;
+  border-radius: 50%;
+  background: #ffffff33;
+  color: white;
+  cursor: pointer;
+}
+
+.lightbox-close {
+  top: 20px;
+  right: 20px;
+  width: 42px;
+  height: 42px;
+  font-size: 20px;
+}
+
+.lightbox-prev,
+.lightbox-next {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  font-size: 23px;
+}
+
+.lightbox-prev { left: 15px; }
+.lightbox-next { right: 15px; }
+
+.lightbox-counter {
+  position: absolute;
+  bottom: 20px;
+  color: white;
+  font-size: 13px;
+}
+
+/* =====================================
+   GIAO DIỆN ĐIỆN THOẠI
+===================================== */
+
+@media (max-width: 650px) {
+  .album-dialog {
+    padding: 30px 15px;
+    border-width: 4px;
+  }
+
+  .album-header h2 {
+    font-size: 36px;
+  }
+
+  .album-photos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 9px;
+  }
+
+  .album-photos button {
+    border-width: 3px;
+  }
+
+  .photo-lightbox {
+    padding: 60px 45px;
+  }
+}
+/* Hiển thị 3 album cân đối */
+.album-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Điện thoại: các album xếp dọc */
+@media (max-width: 650px) {
+  .album-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ======================================
+   GÓC VIDEO - THƯỚC PHIM TRI ÂN
+====================================== */
+
+.video-section {
+  background: #fbf4e6;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.video-card {
+  background: #fffaf0;
+  padding: 9px;
+  border: 1px solid #e5d6ba;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px #604b3320;
+  overflow: hidden;
+  transition: transform .3s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-5px);
+}
+
+.video-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 7px;
+  background: #e4d4ba;
+}
+
+.video-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.video-info {
+  padding: 18px 14px 12px;
+  text-align: center;
+}
+
+.video-info h3 {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 21px;
+  color: #714934;
+  margin: 0 0 8px;
+}
+
+.video-info p {
+  font-size: 13px;
+  color: #796955;
+  margin: 0;
+}
+
+/* Giao diện điện thoại */
+@media (max-width: 700px) {
+  .video-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .video-info h3 {
+    font-size: 18px;
+  }
+}
+
+/* ======================================
+   HIỆU ỨNG PHÁO GIẤY
+====================================== */
+
+#confettiCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+}
