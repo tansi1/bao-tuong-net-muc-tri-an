@@ -509,3 +509,96 @@
     object-fit: cover;
   }
 }
+
+/* ==========================================
+   SỬA GIAO DIỆN LỜI CHÚC TRÊN ĐIỆN THOẠI
+========================================== */
+
+@media (max-width: 650px) {
+
+  /* Bố cục phần lời chúc */
+  #loichuc {
+    padding: 40px 6%;
+  }
+
+  #loichuc .wish-area {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Giảm khoảng cách giữa hình và form */
+  #loichuc .wish-intro {
+    margin: 0;
+    padding: 0;
+  }
+
+  #loichuc .wish-intro h3 {
+    font-size: 30px;
+    margin: 0 0 12px;
+  }
+
+  #loichuc .wish-intro p {
+    margin: 0 0 12px;
+  }
+
+  /* Thu nhỏ emoji hoa và thư */
+  #loichuc .wish-intro > div {
+    font-size: 48px !important;
+    margin: 12px 0 !important;
+    line-height: 1.3;
+  }
+
+  /* Form nhập lời chúc */
+  #wishForm {
+    width: 100%;
+    min-width: 0;
+  }
+
+  #wishForm .formfield {
+    display: block;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  #wishForm input,
+  #wishForm textarea {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+
+  /* Hai nút có chiều rộng bằng nhau */
+  #wishForm .btn {
+    display: block;
+    width: 100%;
+    margin: 10px 0 !important;
+    padding: 14px 12px;
+    font-size: 13px;
+    text-align: center;
+    white-space: normal;
+  }
+
+  /* Các tấm thiệp lời chúc */
+  #loichuc .wish-wall {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 25px;
+  }
+
+  #loichuc .wish {
+    width: 100%;
+    min-width: 0;
+    padding: 20px;
+    transform: none;
+    overflow-wrap: anywhere;
+  }
+
+  #loichuc .wish:nth-child(even) {
+    transform: none;
+  }
+
+}
