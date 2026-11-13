@@ -602,3 +602,84 @@
   }
 
 }
+
+/* ==========================================
+   TỐI ƯU HEADER TRÊN ĐIỆN THOẠI
+========================================== */
+
+@media (max-width: 650px) {
+
+  /* Thanh menu */
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 5%;
+    gap: 10px;
+  }
+
+  /* Khu vực logo và tên trường */
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+    flex: 1;
+  }
+
+  /* Logo trường */
+  .brandmark {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+  }
+
+  .brandmark img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  /* Tên trường */
+  .brand > span:last-child {
+    font-size: 13px;
+    line-height: 1.5;
+    white-space: nowrap;
+  }
+
+  /* Dòng báo tường điện tử */
+  .brand small {
+    font-size: 9px !important;
+    letter-spacing: 0.5px !important;
+    white-space: nowrap;
+  }
+
+  /* Nút menu 3 gạch */
+  .mobile-toggle {
+    display: block;
+    flex-shrink: 0;
+    font-size: 27px;
+    color: #69422d;
+    padding: 5px;
+  }
+
+  /* Ẩn nút Viết lời chúc lớn */
+  .navbutton {
+    display: none;
+  }
+
+  /* Menu khi mở */
+  .navlinks {
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 20px;
+    background: #fff8e9;
+    box-shadow: 0 10px 20px #604b3320;
+  }
+
+  .navlinks.open {
+    display: flex;
+  }
+}
