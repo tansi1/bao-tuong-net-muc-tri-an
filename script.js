@@ -22,6 +22,9 @@ const slideshow = document.getElementById("schoolSlideshow");
 
 if (slideshow && slideImages.length > 0) {
   const wrapper = document.getElementById("slidesWrapper");
+
+wrapper.innerHTML = "";
+
   const dotsContainer = document.getElementById("slideDots");
   const prevBtn = slideshow.querySelector(".slide-prev");
   const nextBtn = slideshow.querySelector(".slide-next");
