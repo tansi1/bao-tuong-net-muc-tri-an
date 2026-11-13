@@ -734,3 +734,243 @@
     letter-spacing: 0 !important;
   }
 }
+/* =====================================
+   ẢNH NỀN CHO 3 KHUNG ALBUM
+===================================== */
+
+.album-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 250px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 7px solid #fff;
+}
+
+/* Lớp phủ giúp chữ dễ đọc hơn */
+.album-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(44, 36, 30, 0.65) 0%,
+    rgba(44, 36, 30, 0.25) 35%,
+    rgba(255, 255, 255, 0.08) 100%
+  );
+  z-index: 0;
+}
+
+/* Đưa nội dung lên trên lớp phủ */
+.album-card .symbol,
+.album-card b,
+.album-card .overlay {
+  position: relative;
+  z-index: 1;
+}
+
+/* Biểu tượng */
+.album-card .symbol {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.85);
+  font-size: 28px;
+  margin-top: 28px;
+}
+
+/* Tiêu đề album */
+.album-card b {
+  display: block;
+  margin-top: 90px;
+  color: #fff;
+  font-size: 22px;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+/* Dòng xem album */
+.album-card .overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 16px;
+  color: #fff;
+  background: transparent;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.45);
+  font-size: 14px;
+}
+
+
+
+/* =====================================
+   ẢNH NỀN CHO 3 ALBUM
+===================================== */
+
+/* Album 1: Thầy cô và học sinh */
+.album-card.album-thayco {
+  background-image: url("pic/7.jpg") !important;
+  background-position: center center;
+}
+
+/* Album 2: Hoạt động 20/11 */
+.album-card.album-hoatdong {
+  background-image: url("pic/25.jpg") !important;
+  background-position: center center;
+}
+
+/* Album 3: Khoảnh khắc lớp em */
+.album-card.album-lopem {
+  background-image: url("pic/11.jpg") !important;
+  background-position: center 65%;
+}
+
+/* Hiển thị ảnh nền */
+.album-card {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+/* Điện thoại */
+@media (max-width: 650px) {
+  .album-card {
+    min-height: 220px;
+  }
+
+  .album-card b {
+    font-size: 18px;
+    margin-top: 78px;
+  }
+
+  .album-card .symbol {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    margin-top: 24px;
+  }
+}
+
+
+/* =====================================
+   ALBUM - ANH RO NET, NEN MO HAI BEN
+===================================== */
+
+/* Khung album */
+.album-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 280px;
+  background-image: none !important;
+  background-color: #e8dac6;
+}
+
+/* Anh nen mo phu kin */
+.album-card::before {
+  content: "";
+  position: absolute;
+  inset: -15px;
+  z-index: 0;
+  background: var(--album-image) center / cover no-repeat;
+  filter: blur(14px) brightness(0.75);
+  pointer-events: none;
+}
+
+/* Anh chinh ro net, khong bi cat */
+.album-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: var(--album-image) center / contain no-repeat;
+  pointer-events: none;
+}
+
+/* Anh tung album */
+.album-card.album-thayco {
+  --album-image: url("pic/7.jpg");
+}
+
+.album-card.album-hoatdong {
+  --album-image: url("pic/25.jpg");
+}
+
+.album-card.album-lopem {
+  --album-image: url("pic/11.jpg");
+}
+
+/* Noi dung nam tren anh */
+.album-card .symbol,
+.album-card b,
+.album-card .overlay {
+  position: relative;
+  z-index: 2;
+}
+
+/* Chu noi bat */
+.album-card b {
+  color: white;
+  text-shadow: 0 2px 6px #0009;
+}
+
+.album-card .overlay {
+  color: white;
+  background: rgba(30, 25, 20, 0.45);
+}
+
+/* Dien thoai */
+@media (max-width: 650px) {
+  .album-card {
+    min-height: 220px;
+  }
+}
+
+/* ===== CHỮ ALBUM Ở CUỐI ẢNH ===== */
+
+.album-card {
+  justify-content: flex-end;
+  padding: 20px 12px 55px;
+}
+
+/* Ẩn biểu tượng emoji */
+.album-card .symbol {
+  display: none;
+}
+
+/* Tên album */
+.album-card b {
+  margin: 0 !important;
+  font-size: 21px;
+  color: white;
+  text-shadow: 0 2px 5px #0009;
+}
+
+/* Dải chữ Xem album */
+.album-card .overlay {
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  width: 100%;
+  padding: 5px;
+  background: transparent;
+  font-size: 13px;
+}
+
+/* Nền chuyển màu ở đáy */
+.album-card .overlay::before {
+  content: none;
+}
+
+@media (max-width: 650px) {
+  .album-card {
+    padding-bottom: 50px;
+  }
+
+  .album-card b {
+    font-size: 18px;
+  }
+}
