@@ -141,9 +141,10 @@ if (wishForm) {
 
       wishForm.reset();
 
-      toast(
-        "Đã gửi lời chúc! Lời chúc sẽ hiển thị sau khi được duyệt. 💌"
-      );
+      
+toast("Đã gửi lời chúc thành công! 💌");
+await loadWishes();
+
 
     } catch (error) {
       console.error("Lỗi gửi lời chúc:", error);
