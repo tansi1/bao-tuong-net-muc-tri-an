@@ -1,6 +1,166 @@
 const stories=[{title:'Người gieo những mùa xanh',text:['Có những hạt giống lớn lên từ đất, cũng có những ước mơ lớn lên từ lời động viên của thầy cô. Trong những ngày còn bỡ ngỡ dưới mái trường, chúng em được thầy cô kiên nhẫn chỉ bảo, sửa từng lỗi nhỏ và mỉm cười trước mỗi tiến bộ.','Có những tiết học không chỉ dừng ở sách vở. Đó còn là bài học về lòng tử tế, sự trung thực, tinh thần đoàn kết và nghị lực khi gặp khó khăn. Mỗi ngày đến lớp, chúng em mang về thêm một điều đáng quý.','Nhân ngày 20/11, chúng em xin cảm ơn những người lặng lẽ gieo mùa xanh tri thức. Chúng em sẽ cố gắng học tập và trưởng thành để xứng đáng với tình yêu thương ấy.']},{title:'Một thời áo trắng',text:['Tiếng trống trường vang lên, sân trường lại rộn rã những bước chân và câu chuyện không đầu không cuối. Có khi chỉ là một buổi kiểm tra, một lần chuẩn bị văn nghệ hay một buổi trực nhật, nhưng tất cả dần trở thành ký ức không thể thay thế.','Chúng em nhớ những ánh mắt khích lệ khi gặp bài khó, những lời nhắc nhở nghiêm khắc mà ấm áp, nhớ cả khoảng sân đầy nắng sau giờ học. Mái trường THCS Bình Lợi lưu giữ biết bao hành trình lớn lên như thế.','Rồi một ngày, chúng em sẽ rời xa lớp học quen thuộc. Nhưng hình ảnh thầy cô và bạn bè sẽ vẫn ở đó, nguyên vẹn như trang lưu bút tuổi học trò.']},{title:'Điều em chưa kịp nói',text:['Kính gửi thầy cô!','Có những lời cảm ơn thật giản dị nhưng chúng em lại ngại ngùng chưa kịp nói. Cảm ơn vì thầy cô luôn tin tưởng ngay cả khi chúng em chưa đủ tự tin. Cảm ơn vì những lần nhắc nhở và cả những lời khen đúng lúc.','Ngày 20/11, chúng em không có món quà nào quý hơn sự cố gắng mỗi ngày. Mong thầy cô luôn mạnh khỏe, vui vẻ và hạnh phúc. Chúng em yêu quý thầy cô rất nhiều!']}];
 const modal=document.getElementById('modal');document.querySelectorAll('[data-story]').forEach(b=>b.addEventListener('click',()=>{const s=stories[+b.dataset.story];document.getElementById('storyTitle').textContent=s.title;document.getElementById('storyContent').innerHTML='';s.text.forEach(p=>{let e=document.createElement('p');e.textContent=p;document.getElementById('storyContent').appendChild(e)});modal.classList.add('show')}));function closeModal(){modal.classList.remove('show')}document.getElementById('closeModal').onclick=closeModal;modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});document.getElementById('menuBtn').onclick=()=>document.getElementById('menu').classList.toggle('open');document.querySelectorAll('.navlinks a').forEach(a=>a.onclick=()=>document.getElementById('menu').classList.remove('open'));
-const seed=[{name:'Tập thể học sinh lớp 6/1',message:'Kính chúc quý thầy cô luôn mạnh khỏe, hạnh phúc và tràn đầy nhiệt huyết với nghề! 🌷'},{name:'Góc học trò',message:'Cảm ơn thầy cô vì đã luôn kiên nhẫn, yêu thương và đồng hành cùng chúng em. Chúc mừng 20/11! 💛'}];let wishes=[];try{wishes=JSON.parse(localStorage.getItem('binhloi-wishes')||'[]');if(!Array.isArray(wishes))wishes=[]}catch(e){wishes=[]}function renderWishes(){let wall=document.getElementById('wishWall');wall.innerHTML='';[...wishes,...seed].forEach(w=>{let box=document.createElement('div');box.className='wish';let p=document.createElement('p'),name=document.createElement('b');p.textContent='“'+w.message+'”';name.textContent='— '+w.name;box.append(p,name);wall.appendChild(box)})}renderWishes();let toastTimeout;function toast(t){const el=document.getElementById('toast');el.textContent=t;el.style.display='block';clearTimeout(toastTimeout);toastTimeout=setTimeout(()=>el.style.display='none',3000)}document.getElementById('wishForm').addEventListener('submit',e=>{e.preventDefault();const name=document.getElementById('name').value.trim(),message=document.getElementById('message').value.trim();if(!name||!message)return;wishes.unshift({name,message});try{localStorage.setItem('binhloi-wishes',JSON.stringify(wishes))}catch(e){}renderWishes();e.target.reset();toast('Đã gắn lời chúc vào báo tường trên thiết bị này!')});
+
+/* ===== LỜI CHÚC TRỰC TUYẾN - SUPABASE ===== */
+
+const SUPABASE_URL = "https://nmjairwuhsxvoeldlvtd.supabase.co";
+
+const SUPABASE_PUBLISHABLE_KEY =
+  "sb_publishable_d1-L5BEb53G5FkKQ0GT9hA_Wco-vwVQ";
+
+// Hai lời chúc mẫu
+const seed = [
+  {
+    name: "Tập thể học sinh lớp 6/1",
+    message: "Kính chúc quý thầy cô luôn mạnh khỏe, hạnh phúc và tràn đầy nhiệt huyết với nghề! 🌷"
+  },
+  {
+    name: "Góc học trò",
+    message: "Cảm ơn thầy cô vì đã luôn kiên nhẫn, yêu thương và đồng hành cùng chúng em. Chúc mừng 20/11! 💛"
+  }
+];
+
+const wishWall = document.getElementById("wishWall");
+const wishForm = document.getElementById("wishForm");
+const toastElement = document.getElementById("toast");
+
+let toastTimeout;
+
+// Hiển thị thông báo
+function toast(message) {
+  if (!toastElement) return;
+
+  toastElement.textContent = message;
+  toastElement.style.display = "block";
+
+  clearTimeout(toastTimeout);
+
+  toastTimeout = setTimeout(() => {
+    toastElement.style.display = "none";
+  }, 4000);
+}
+
+// Hiển thị lời chúc trên báo tường
+function renderWishes(items) {
+  if (!wishWall) return;
+
+  wishWall.replaceChildren();
+
+  [...items, ...seed].forEach(wish => {
+    const box = document.createElement("div");
+    box.className = "wish";
+
+    const message = document.createElement("p");
+    const name = document.createElement("b");
+
+    message.textContent = "“" + wish.message + "”";
+    name.textContent = "— " + wish.name;
+
+    box.append(message, name);
+    wishWall.appendChild(box);
+  });
+}
+
+// Lấy lời chúc đã duyệt từ Supabase
+async function loadWishes() {
+  try {
+    const response = await fetch(
+      SUPABASE_URL +
+        "/rest/v1/wishes?select=name,message&status=eq.approved&order=created_at.desc&limit=100",
+      {
+        headers: {
+          apikey: SUPABASE_PUBLISHABLE_KEY
+        }
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error("HTTP " + response.status);
+    }
+
+    const approvedWishes = await response.json();
+
+    renderWishes(approvedWishes);
+
+  } catch (error) {
+    console.error("Lỗi tải lời chúc:", error);
+    renderWishes([]);
+    toast("Chưa tải được lời chúc trực tuyến.");
+  }
+}
+
+// Gửi lời chúc mới
+if (wishForm) {
+  wishForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const name = document
+      .getElementById("name")
+      .value.trim();
+
+    const message = document
+      .getElementById("message")
+      .value.trim();
+
+    if (!name || !message) return;
+
+    if (name.length > 50 || message.length > 500) {
+      toast("Tên hoặc lời chúc quá dài.");
+      return;
+    }
+
+    const submitButton = wishForm.querySelector(
+      'button[type="submit"]'
+    );
+
+    if (submitButton) submitButton.disabled = true;
+
+    try {
+      const response = await fetch(
+        SUPABASE_URL + "/rest/v1/wishes",
+        {
+          method: "POST",
+          headers: {
+            apikey: SUPABASE_PUBLISHABLE_KEY,
+            "Content-Type": "application/json",
+            Prefer: "return=minimal"
+          },
+          body: JSON.stringify({
+            name: name,
+            message: message
+          })
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error(
+          "HTTP " + response.status + " " +
+          (await response.text())
+        );
+      }
+
+      wishForm.reset();
+
+      toast(
+        "Đã gửi lời chúc! Lời chúc sẽ hiển thị sau khi được duyệt. 💌"
+      );
+
+    } catch (error) {
+      console.error("Lỗi gửi lời chúc:", error);
+      toast("Chưa gửi được lời chúc. Vui lòng thử lại.");
+
+    } finally {
+      if (submitButton) submitButton.disabled = false;
+    }
+  });
+}
+
+// Tải lời chúc khi mở website
+renderWishes([]);
+loadWishes();
+
+// Tự cập nhật mỗi 30 giây
+setInterval(loadWishes, 30000);
 
 // ===== SLIDESHOW HINH ANH =====
 
